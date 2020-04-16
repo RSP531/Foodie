@@ -8,15 +8,16 @@ const SearchScreen = () => {
   const [results, setResults] = useState([]);
   const [err, setErr] = useState("");
 
+  //call search api when component is first rendered
   useEffect(() => {
     searchApi("food");
-  });
+  }, []);
 
   const searchApi = async searchInput => {
     try {
       const res = await yelp.get("/search", {
         params: {
-          searchInput,
+          term: searchInput,
           limit: 50,
           location: "Harrisonburg, va"
         }
