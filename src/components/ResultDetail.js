@@ -1,18 +1,31 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
-const ResultDetail = ({ restaurantName }) => {
+const ResultDetail = ({ restaurantName, result }) => {
   return (
     <View>
-      <Text style={styles.titleStyle}>One Detail{restaurantName}</Text>
+      <Image style={styles.imageStyle} source={{ uri: result.image_url }} />
+      <Text style={styles.name}> {result.name}</Text>
+      <Text style={styles.rating}>
+        {" "}
+        {result.rating} Stars, {result.review_count} Reviews
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  titleStyle: {
-    fontSize: 18,
+  imageStyle: {
+    width: 250,
+    height: 120,
+    borderRadius: 4
+  },
+  name: {
+    fontSize: 16,
     fontWeight: "bold"
+  },
+  rating: {
+    fontSize: 12
   }
 });
 
