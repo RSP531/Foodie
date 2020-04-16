@@ -6,7 +6,6 @@ const ResultsList = ({ headerText, results }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.titleStyle}>{headerText}</Text>
-      {/* <Text>Results: {results.length}</Text> */}
       <FlatList
         horizontal
         data={results}
@@ -26,7 +25,6 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 18,
     fontWeight: "bold"
-    // marginBottom: 5
   }
 });
 
