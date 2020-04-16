@@ -7,7 +7,11 @@ const SearchScreen = () => {
 
   return (
     <View>
-      <SearchBar input={input} onInputChange={e => setInput(e)} />
+      <SearchBar
+        input={input}
+        onInputChange={e => setInput(e)}
+        onTermSubmit={() => console.log("done editing")}
+      />
       <Text>{input}</Text>
     </View>
   );
