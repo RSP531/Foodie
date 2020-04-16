@@ -6,6 +6,7 @@ import yelp from "../api/yelp";
 const SearchScreen = () => {
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
+  const [err, setErr] = useState("");
 
   const searchApi = async () => {
     try {
@@ -16,10 +17,10 @@ const SearchScreen = () => {
           location: "Harrisonburg, va"
         }
       });
+      setResults(res.data.businesses);
     } catch (err) {
-      console.log(err);
+      setErr("Something went wrong");
     }
-    setResults(res.data.businesses);
   };
 
   return (
@@ -29,6 +30,7 @@ const SearchScreen = () => {
         onInputChange={setInput}
         onTermSubmit={searchApi}
       />
+      <Text>{err}</Text>
       <Text>We have found {results.length} results</Text>
     </View>
   );
