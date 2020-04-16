@@ -20,7 +20,7 @@ const ResultsList = ({ headerText, results }) => {
 };
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 5
+    marginBottom: 3
   },
   titleStyle: {
     marginLeft: 10,
