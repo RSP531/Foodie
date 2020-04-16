@@ -11,6 +11,8 @@ const SearchBar = ({ input, onInputChange }) => {
         placeholder="Search"
         value={input}
         onChangeText={e => onInputChange(e)}
+        autoCapitalize="none"
+        autoCorrect={true}
       />
     </View>
   );

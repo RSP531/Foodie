@@ -8,7 +8,7 @@ const SearchScreen = () => {
   return (
     <View>
       <SearchBar input={input} onInputChange={e => setInput(e)} />
-      <Text>Other App goes here</Text>
+      <Text>{input}</Text>
     </View>
   );
 };
