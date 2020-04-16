@@ -13,7 +13,7 @@ const SearchBar = () => {
 
 const styles = StyleSheet.create({
   backgroundStyle: {
-    backgroundColor: "#F0EEEE",
+    backgroundColor: "#BEE9E8",
     height: 50,
     borderRadius: 5,
     marginHorizontal: 15,
@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
   iconStyle: {
     fontSize: 40,
     alignSelf: "center",
-    marginHorizontal: 15
+    margin: 10,
+    marginRight: 15
   }
 });
 

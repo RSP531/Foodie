@@ -6,7 +6,7 @@ const SearchScreen = () => {
   return (
     <View>
       <SearchBar />
-      <Text>Hello</Text>
+      <Text>Other App goes here</Text>
     </View>
   );
 };
