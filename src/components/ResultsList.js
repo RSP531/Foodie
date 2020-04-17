@@ -8,6 +8,7 @@ const ResultsList = ({ headerText, results }) => {
       <Text style={styles.titleStyle}>{headerText}</Text>
       <FlatList
         horizontal
+        showsHorizontalScrollIndicator={false}
         data={results}
         keyExtractor={result => result.id}
         renderItem={({ item }) => {
