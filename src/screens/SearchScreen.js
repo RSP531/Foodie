@@ -31,11 +31,11 @@ const SearchScreen = () => {
       />
       <ResultsList
         results={filterResultsByPrice("$$")}
-        headerText={"More Expensive"}
+        headerText={"Treat Yo Self"}
       />
       <ResultsList
         results={filterResultsByPrice("$$$")}
-        headerText={"Most Expensive $$$$"}
+        headerText={"Big Spender $$$$"}
       />
     </View>
   );
