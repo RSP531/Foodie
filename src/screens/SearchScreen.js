@@ -16,7 +16,7 @@ const SearchScreen = () => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <>
       <SearchBar
         input={input}
         onInputChange={setInput}
@@ -42,7 +42,7 @@ const SearchScreen = () => {
           headerText={"Big Spender $$$$"}
         />
       </ScrollView>
-    </View>
+    </>
   );
 };
 
