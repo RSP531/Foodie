@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList, Image } from "react-native";
 import yelp from "../api/yelp";
 
 const ResultsShowScreen = ({ navigation }) => {
@@ -24,12 +24,27 @@ const ResultsShowScreen = ({ navigation }) => {
     }
   };
 
+  if (!businessInfo) {
+    return null;
+  }
   return (
     <View>
-      <Text>REsults {id}</Text>
+      <Text>{businessInfo.name}</Text>
+      <FlatList
+        data={businessInfo.photos}
+        keyExtractor={photo => photo}
+        renderItem={({ item }) => {
+          return <Image style={styles.image} source={{ uri: item }} />;
+        }}
+      />
     </View>
   );
 };
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  image: {
+    height: 200,
+    width: 300
+  }
+});
 
 export default ResultsShowScreen;
